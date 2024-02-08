@@ -12,4 +12,3 @@ slug: /
     - Desenvolvimento de Serious Game para a Universidade Federal de Alagoas.
     - Criação de Aplicação Web para a Natura.
     - Implementação de Modelo Preditivo para o BCG.
-
