@@ -35,7 +35,7 @@ jobs:
         node-version: latest
     - name: Install and Build
       run: |
-        cd ponderada
+        cd docs
         npm install
         npm run build
         mv build ../build
