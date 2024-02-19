@@ -38,7 +38,7 @@ jobs:
         cd semana-01/docs
         npm install
         npm run build
-        mv build ../build
+        mv build ../../build
     - name: Setup Pages
       uses: actions/configure-pages@v3
     - name: Upload artifact
