@@ -73,7 +73,7 @@ def processar(dados, robo, posicao_inicial, choices):
 
     if comando == "Voltar para posição inicial":
         spinner.start()
-        robo.move_to(posicao_inicial[0], posicao_inicial[1], posicao_inicial[2], posicao_inicial[3], wait=True)
+        robo.move_to(243.84, 5.12, 157.94, 0)
         spinner.stop()
 
         if "Voltar para posição inicial" in choices:
