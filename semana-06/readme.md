@@ -11,14 +11,16 @@
 
 ## O repositorio esta organizado da seguinte maneira:
 
+```
 Atividades-ponderadas-M5/
 |
-|--flask-test
-|--semana-01
-|--semana-03
+|--flask-test/
+|--semana-01/
+|--semana-03/
 |--semana-06/
 |  |--ponderada-semana-06/
 |  |  |--ponderada-semana-06.kicad_sch
 |  |  |--ponderada-semana-06.kicad_pcb
 |  |--readme.md         
-|--semana-07
+|--semana-07/
+```
