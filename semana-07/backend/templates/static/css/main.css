@@ -1,0 +1,57 @@
+/* Estilo básico para o corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para o contêiner principal */
+.main {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Define a altura para ocupar toda a altura da janela do navegador */
+}
+
+/* Estilo para a barra de navegação */
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.navbar-inner {
+    display: flex;
+    justify-content: center;
+}
+
+.brand {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+/* Estilo para o conteúdo principal */
+.main-content {
+    flex-grow: 1; /* Faz com que este conteúdo principal ocupe o espaço restante */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Estilo para os botões */
+button {
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

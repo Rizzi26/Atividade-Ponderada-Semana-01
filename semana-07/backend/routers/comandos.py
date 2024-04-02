@@ -10,7 +10,7 @@ comandos_table = db.table("comandos")
 
 @router.route('/')
 def index():
-    return render_template("login.html")
+    return render_template("index.html")
 
 @router.route('/login', methods=['GET', 'POST'])
 def login():

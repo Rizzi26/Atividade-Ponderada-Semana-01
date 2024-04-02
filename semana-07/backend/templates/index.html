@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro de comandos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <script src="https://unpkg.com/htmx.org@1.9.11" integrity="sha384-0gxUXCCR8yv9FM2b+U3FDbsKthCI66oH5IA9fHppQq9DDMHuMauqq1ZHBpJxQ0J0" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='scripts/index.js') }}"></script>
+</head>
+<body>
+    <div clas="main">
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a href="#" class="brand">Centro de comandos</a>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div>
+                <h1>Qual comando voce deseja realizar?</h1>
+                <button onclick="movimentar()">Movimentação</button>
+                <button onclick="ligarAtuador()">Ligar atuador</button>
+                <button onclick="desligarAtuador()">Desligar atuador</button>
+                <button onclick="home()">Home</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
