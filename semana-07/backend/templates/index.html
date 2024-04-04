@@ -17,7 +17,7 @@
                 <div>
                     <img src="../static/img/fig_legal.png" alt="robot" class="robot">
                 </div>
-                <div class="container">
+                <div class="labels">
                     <a href="/" class="brand">Centro de comandos</a>
                     <a href="#" class="brand" hx-get="/logs" hx-target=".logs">Logs</a>
                 </div>
@@ -36,6 +36,7 @@
                     <p>{{ log.comando }}</p>
                     <p>{{ log.data_hora }}</p>
                 {% endfor %}
+                <hr>
             </div>
         </div>
     </div>
