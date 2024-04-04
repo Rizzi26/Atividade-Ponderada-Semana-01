@@ -21,13 +21,21 @@ body {
 
 .navbar-inner {
     display: flex;
-    justify-content: center;
+    justify-content: space-around; /* Justifica os itens ao redor do contêiner */
 }
 
 .brand {
     color: #fff;
     text-decoration: none;
     font-size: 24px;
+    margin-right: 50px; /* Adiciona uma margem entre os itens */
+    transition: background-color 0.3s; /* Adiciona uma transição suave */
+    padding: 10px;
+}
+
+.brand:hover {
+    background-color: white; /* Altera a cor de fundo ao passar o mouse por cima */
+    color: #333; /* Altera a cor do texto para contrastar com a cor de fundo */
 }
 
 /* Estilo para o conteúdo principal */
@@ -54,4 +62,29 @@ button {
 
 button:hover {
     background-color: #0056b3;
+}
+.robot{
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+}
+
+.centralizar {
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.logs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    width: 50%;
 }
