@@ -17,6 +17,11 @@ function movimentar() {
             continue;
         }
 
+        if (isNaN(x) || isNaN(y) || isNaN(z)) {
+            alert("Você não digitou um número!");
+            return;
+        }        
+
         break;
     }
 

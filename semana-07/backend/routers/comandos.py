@@ -9,7 +9,7 @@ db = TinyDB("db/logs.json")
 
 comandos_table = db.table("logs")
 
-# robo = RobotClass()
+robo = RobotClass()
 
 @router.route('/')
 def index():
@@ -24,18 +24,15 @@ def movimentar():
     z = dados.get('z')
 
     if x == None or y == None or z == None:
-        registrar_comando("não foi possível movimentar o robô para a posição desejada", x=x, y=y, z=z)
+        registrar_comando("Movimento - Não foi possível movimentar o robô", x=x, y=y, z=z)
         return redirect(url_for('index.html'))
     else:
         x = float(x)
         y = float(y)
         z = float(z)
-        registrar_comando("movimentar", x=x, y=y, z=z)
-        #robo.move_to(x, y, z, 0)
-
+        registrar_comando("Movimento - Movimento realizado com sucesso", x=x, y=y, z=z)
+        robo.move_to(x, y, z, 0)
     
-    print(f'Valor de x: {x}, Valor de y: {y}, Valor de z: {z}')
-
     return render_template('index.html')
 
 @router.route('/ligar-ferramenta', methods=['POST'])
@@ -45,12 +42,10 @@ def ligar_ferramenta():
     ligar = dados.get('ligar')
 
     if ligar == True:
-        registrar_comando("ligando ferramenta", ligar=ligar)
-        #robo.ligar_ferramenta()
-        print(f'Ferramenta ligada!')
+        registrar_comando("Atuador - Ferramenta ligada com sucesso", ligar=ligar)
+        robo.ligar_ferramenta()
     else:
-        registrar_comando("não foi possível ligar a ferramenta", ligar=ligar)
-        print(f'Não foi possível ligar a ferramenta!')
+        registrar_comando("Atuador - Não foi possível ligar a ferramenta", ligar=ligar)
 
     return render_template('index.html')
 
@@ -61,12 +56,10 @@ def desligar_ferramenta():
     desligar = dados.get('desligar')
 
     if desligar == True:
-        registrar_comando("desligando ferramenta", desligar=desligar)
-        #robo.desligar_ferramenta()
-        print(f'Ferramenta desligada!')
+        registrar_comando("Atuador - Ferramenta desligada com sucesso", desligar=desligar)
+        robo.desligar_ferramenta()
     else:
-        registrar_comando("não foi possível desligar a ferramenta", desligar=desligar)
-        print(f'Não foi possível desligar a ferramenta!')
+        registrar_comando("Atuador - Não foi possível desligar a ferramenta", desligar=desligar)
 
     return render_template('index.html')
 
@@ -77,12 +70,10 @@ def home():
     voltar = dados.get('voltar')
 
     if voltar == True:
-        #robo.move_to(243.84, 5.12, 157.94, 0)
-        registrar_comando("voltando para a home", voltar=voltar, x=243.84, y=5.12, z=157.94)
-        print(f'Voltando para a posição inicial!')
+        robo.move_to(243.84, 5.12, 157.94, 0)
+        registrar_comando("Home - O robô voltou para a casa com sucesso", voltar=voltar, x=243.84, y=5.12, z=157.94)
     else:
-        registrar_comando("não foi possível voltar para home", voltar=voltar)
-        print(f'Não foi possível voltar para a posição inicial!')
+        registrar_comando("Home - O robô não conseguiu voltar para a casa", voltar=voltar)
 
     return render_template('index.html')
 
